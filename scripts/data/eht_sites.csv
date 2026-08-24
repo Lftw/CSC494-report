@@ -1,0 +1,29 @@
+# EHT station table for the CSC494 report.
+#
+# Coordinates (geocentric ECEF, metres), SEFDs (Jy), field-rotation
+# coefficients and leakage terms are taken from eht-imaging's
+# arrays/EHT2017.txt and arrays/EHT2025.txt (GPL-3, achael/eht-imaging);
+# they are publicly published EHT array parameters.
+#
+# fr_par / fr_elev / fr_offset parametrise the field rotation angle as
+#     phi = fr_par * parallactic_angle + fr_elev * elevation + fr_offset,
+# which encodes the mount type: 1/0 is a standard alt-az mount, 1/-1 a
+# Nasmyth-left optical path, 1/+1 Nasmyth-right, 0/0 an equatorial mount.
+#
+# `feeds` is the receiver's native polarization basis and is a modelling
+# choice of this report: ALMA and NOEMA record linear (X/Y) feeds, the
+# other stations circular (R/L). ALMA's data is normally converted to a
+# circular basis by the QA2 pipeline before imaging -- handling it
+# natively, without that conversion, is what this project is about.
+site,name,location,x_m,y_m,z_m,diameter_m,n_dishes,feeds,sefd_jy,fr_par,fr_elev,fr_offset_deg,d_re_1,d_im_1,d_re_2,d_im_2,in_eht2017
+ALMA,Atacama Large Millimeter/submillimeter Array,Chile,2225061.164,-5440057.37,-2481681.15,12.0,37,xy,90,1,0,0,0,0,0,0,1
+APEX,Atacama Pathfinder Experiment,Chile,2225039.53,-5441197.63,-2479303.36,12.0,1,rl,3500,1,1,0,0,0,0,0,1
+SMT,Submillimeter Telescope,"Arizona, USA",-1828796.200,-5054406.800,3427865.200,10.0,1,rl,5000,1,1,0,0,0,0,0,1
+LMT,Large Millimeter Telescope Alfonso Serrano,Mexico,-768713.9637,-5988541.7982,2063275.9472,32.5,1,rl,600,1,-1,0,0,0,0,0,1
+SMA,Submillimeter Array,"Hawaii, USA",-5464523.400,-2493147.080,2150611.750,6.0,8,rl,4900,1,-1,45,0,0,0,0,1
+JCMT,James Clerk Maxwell Telescope,"Hawaii, USA",-5464584.68,-2493001.17,2150653.98,15.0,1,rl,6000,1,0,0,0,0,0,0,1
+PV,"IRAM 30m Telescope, Pico Veleta",Spain,5088967.9000,-301681.6000,3825015.8000,30.0,1,rl,1400,1,-1,0,0,0,0,0,1
+SPT,South Pole Telescope,Antarctica,0.01,0.01,-6359609.7,10.0,1,rl,5000,1,0,0,0,0,0,0,1
+GLT,Greenland Telescope,Greenland,1500692.0,-1191735.0,6066409.0,12.0,1,rl,10000,0,0,0,0,0,0,0,0
+KP,Kitt Peak 12m Telescope,"Arizona, USA",-1995678.840,-5037317.697,3357328.025,12.0,1,rl,10000,0,0,0,0,0,0,0,0
+PDB,"NOEMA, Plateau de Bure",France,4523998.40,468045.240,4460309.760,15.0,12,xy,1500,0,0,0,0,0,0,0,0

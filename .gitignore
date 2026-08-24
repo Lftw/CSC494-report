@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+myvenv/
+
+# Rendered figure exports (rebuild with scripts/export_figures.py)
+figures/
+
+# Working plan, not part of the report
+PLAN.md

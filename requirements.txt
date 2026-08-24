@@ -1,0 +1,18 @@
+# Everything notebooks 01-02 need, and nothing exotic.
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+plotly>=6.0
+anywidget>=0.9        # plotly 6 needs this for go.FigureWidget
+ipywidgets>=8.1
+ipykernel>=6.29       # so VS Code / Jupyter can select this env as a kernel
+jupyterlab>=4.0
+astropy>=6.0          # sky coordinates and times (notebook 02)
+
+# Development only.
+pytest>=7.4
+ruff>=0.5
+
+# Optional: static PNG export of the figures, for slides.
+#   pip install kaleido && plotly_get_chrome
+# See scripts/export_figures.py.

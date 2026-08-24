@@ -1,0 +1,20 @@
+{
+  // The report's code is imported from scripts/ rather than installed, so tell
+  // Pylance where to look -- otherwise every `import polarization` line is flagged as
+  // an unresolved import even though it runs fine.
+  "python.analysis.extraPaths": ["./scripts"],
+  "python.autoComplete.extraPaths": ["./scripts"],
+
+  // Run each notebook with its own folder as the working directory, which is what
+  // each notebook set-up cell expects.
+  "jupyter.notebookFileRoot": "${fileDirname}",
+
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["scripts/tests"],
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true
+  }
+}
